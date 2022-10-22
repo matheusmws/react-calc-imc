@@ -1,0 +1,130 @@
+* {
+    box-sizing: border-box;
+}
+body {
+    font-family: Arial, Helvetica, sans-serif;
+}
+.main {
+}
+.headerContainer {
+    max-width: 70rem;
+    margin: 3rem auto;
+}
+.poweredImage {
+    width: 15rem;
+}
+.container {
+    display: flex;
+    max-width: 70rem;
+    margin: auto;
+}
+.container .leftSide {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    margin-right: 2rem;
+}
+.container .leftSide h1 {
+    margin: 0;
+    font-size: 2rem;
+    color: #3A4B5C;
+}
+.container .leftSide p {
+    line-height: 1.2rem;
+    font-size: 1rem;
+    margin-bottom: 2rem;
+    color: #6A7D8B;
+}
+.container .leftSide input {
+    border: 0;
+    border-bottom: 2px solid rgba(150, 163, 171, .5);
+    padding: 0.5rem 0.5rem;
+    margin-bottom: 1.5rem;
+    font-size: 1rem;
+    outline: 0;
+}
+.container .leftSide button {
+    border-radius: 8px;
+    border: 2px solid transparent;
+    padding: 0.6em 1.2em;
+    margin-top: 2rem;
+    font-size: 1em;
+    font-weight: 500;
+    font-family: inherit;
+    cursor: pointer;
+    color: #FFF;
+    background-color: #227C9D;
+}
+.container .leftSide button,
+.container .rightSide .backArrow {
+    transition: all ease .3s;
+    opacity: .8;
+}
+.container .leftSide button:hover,
+.container .rightSide .backArrow:hover {
+    opacity: 1;
+}
+.container .leftSide input:disabled,
+.container .leftSide button:disabled {
+    opacity: .4;
+    cursor: unset;
+}
+.container .rightSide {
+    display: flex;
+    flex: 1;
+    margin-right: 2rem;
+}
+.container .rightSide .grid {
+    flex: 1;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1rem;
+}
+.container .rightSide .selected {
+    flex: 1;
+    display: flex;
+}
+.container .rightSide .backArrow {
+    position: absolute;
+    background-color: #227C9D;
+    width: 4rem;
+    height: 4rem;
+    border-radius: 5rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    margin-top: 8rem;
+    margin-left: -2rem;
+}
+.container .rightSide .backArrow .arrowImage {
+    width: 2rem;
+}
+
+@media (max-width: 850px) {
+    header {
+        padding: 0 1rem;
+    }
+    .container {
+        padding: 0 2rem;
+        flex-direction: column;
+    }
+    .container .leftSide {
+        margin-bottom: 2rem;
+        margin-right: 0;
+    }
+    .container .rightSide {
+        margin-right: 0;
+    }
+    .container .rightSide .backArrow {
+        margin-left: 0;
+        margin-top: 0;
+        border-radius: 1rem;
+    }
+}
+
+@media (max-width: 430px) {
+    .container .rightSide .grid {
+        grid-template-columns: 1fr;
+    }
+}
